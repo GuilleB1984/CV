@@ -5,13 +5,19 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width:fit-content;
     margin: 0 auto;
     padding: 20px;
 }
 
 h1 {
     text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+h2 {
+    text-align: center;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
@@ -27,6 +33,49 @@ th, td {
     text-align: center;
 }
 
-th {
-    background-color: #f0f0f0;
+
+
+thead {
+    background-color: lightgray;
 }
+.nuevo-objetivo{
+    background-color: rgb(93, 244, 244);
+}
+
+.triple-objetivo{
+    background-color: rgb(78, 211, 78);
+}
+
+.contenedor-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+  }
+  
+  .boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .boton:hover {
+    background-color: #3e8e41;
+  }
+  .contenedor-inicio {
+    display: flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+    margin: auto;
+    padding: 10px;
+  }
+
+  tr th{
+    font-size: 17px;
+  }
