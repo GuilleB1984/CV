@@ -17,9 +17,18 @@ h1 {
 }
 h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 20px;
 }
+
+p {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 
 table {
     border-collapse: collapse;
@@ -79,3 +88,32 @@ thead {
   tr th{
     font-size: 17px;
   }
+  .centrar {
+    display: grid;
+    width: 80%; /* Ancho del div */
+    margin: 0 auto; /* Centrar el div horizontalmente */
+    text-align: center; /* Centrar el texto dentro del div */
+    align-content: space-evenly;
+    justify-content: center;
+}
+
+.centrar img {
+    display: block;
+    margin: 0 auto;
+}
+
+.linea {
+    border: 0; /* Quita los bordes */
+    height: 5px; /* Altura de la línea */
+    /*background: linear-gradient(to right, transparent, #ccc, transparent);  Gradiente horizontal */
+
+    background-image: linear-gradient(to right, transparent, rgb(29, 25, 25), transparent);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+}
