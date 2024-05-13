@@ -12,9 +12,11 @@ body {
 }
 
 .container {
-    max-width:fit-content;
+    display: grid;
+    max-width: 70%;
     margin: 0 auto;
     padding: 20px;
+    align-items: center;
 }
 
 
@@ -34,14 +36,14 @@ p {
     text-align: center;
     font-size: 22px;
     margin-bottom: 20px;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 
 
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: 90%;
 }
 
 th, td {
@@ -58,6 +60,7 @@ thead {
 }
 .nuevo-objetivo{
     background-color: rgb(93, 244, 244);
+    min-width: 90px;
 }
 
 .triple-objetivo{
@@ -97,6 +100,14 @@ thead {
   tr th{
     font-size: 17px;
   }
+
+  th:nth-child(1) { width: 20%; }
+  th:nth-child(2) { width: 27%; }
+  th:nth-child(3) { width: 13%; }
+  th:nth-child(4) { width: 27%; }
+  th:nth-child(5) { width: 13%; }
+
+
   .centrar {
     display: grid;
     width: 80%; /* Ancho del div */
@@ -172,9 +183,13 @@ img {
         margin: 0;
         padding: 0;
     }
+    
     .container {
-        padding: 10px; /* Reducir el padding en dispositivos móviles */
-        
+        display: grid;
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 5px;
+        align-items: center;
     }
     tr td{
         font-size: 10px;
@@ -194,7 +209,7 @@ img {
     img {
         display: grid;
         margin: 0 auto;
-        max-width: 400px;
+        max-width: 100%;
         height: auto;
         align-items: center;
     }
@@ -213,4 +228,13 @@ img {
         margin-left: 5%;
         margin-right: 5%;
     }
+    .nuevo-objetivo{
+        background-color: rgb(93, 244, 244);
+        min-width: 45px;
+    }
+    th:nth-child(1) { width: 20%; }
+    th:nth-child(2) { width: 27%; }
+    th:nth-child(3) { width: 13%; }
+    th:nth-child(4) { width: 27%; }
+    th:nth-child(5) { width: 13%; }
 }
