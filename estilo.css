@@ -169,6 +169,7 @@ thead {
     }
     .container {
         padding: 10px; /* Reducir el padding en dispositivos móviles */
+        
     }
     td{
         font-size: 10px;
@@ -189,8 +190,7 @@ thead {
     .centrar img {
         display: block;
         margin: 0 auto;
-        max-width: 100%; /* Ajustar la imagen al ancho de su contenedor */
-        height: auto; /* Mantener la proporción original de la imagen */
+        
     }
     
     h1 {
@@ -205,9 +205,5 @@ thead {
         font-size: 12px; /* Reducir el tamaño de la fuente */
         margin-left: 5%;
         margin-right: 5%;
-    }
-
-    table {
-        font-size: 14px; /* Reducir el tamaño de la fuente */
     }
 }
