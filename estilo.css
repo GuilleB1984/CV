@@ -176,7 +176,7 @@ img {
         padding: 10px; /* Reducir el padding en dispositivos móviles */
         
     }
-    td{
+    tr td{
         font-size: 10px;
         padding: 4px;
         border: 1px solid #716e6e;
@@ -194,7 +194,7 @@ img {
     img {
         display: grid;
         margin: 0 auto;
-        width: 400px;
+        max-width: 400px;
         height: auto;
         align-items: center;
     }
