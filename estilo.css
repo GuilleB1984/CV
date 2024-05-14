@@ -98,7 +98,7 @@ thead {
   }
 
   tr th{
-    font-size: 17px;
+    font-size: 25px;
   }
 
   th:nth-child(1) { width: 20%; }
@@ -243,12 +243,12 @@ img {
     }
     .nuevo-objetivo{
         background-color: rgb(93, 244, 244);
-        font-size: 15px;
+        font-size: 30px;
         min-width: 40px;
     }
-    th:nth-child(1) { width: 25%; }
-    th:nth-child(2) { width: 26%; }
-    th:nth-child(3) { width: 12%; }
-    th:nth-child(4) { width: 26%; }
-    th:nth-child(5) { width: 11%; }
+    th:nth-child(1) { width: 20%; }
+    th:nth-child(2) { width: 27%; }
+    th:nth-child(3) { width: 13%; }
+    th:nth-child(4) { width: 27%; }
+    th:nth-child(5) { width: 13%; }
 }
