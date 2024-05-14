@@ -205,12 +205,12 @@ img {
         max-width: 85%;
     }
     tr td{
-        font-size: 10px;
+        font-size: 12px;
         padding: 4px;
         border: 1px solid #716e6e;
     }
     tr th{
-        font-size: 13px;
+        font-size: 15px;
         padding: 4px;
         border: 1px solid #716e6e;
     }
@@ -229,21 +229,21 @@ img {
    
     
     h1 {
-        font-size: 24px; /* Reducir el tamaño de la fuente */
+        font-size: 26px; /* Reducir el tamaño de la fuente */
     }
 
     h2 {
-        font-size: 18px; /* Reducir el tamaño de la fuente */
+        font-size: 20px; /* Reducir el tamaño de la fuente */
     }
 
     p {
-        font-size: 12px; /* Reducir el tamaño de la fuente */
+        font-size: 15px; /* Reducir el tamaño de la fuente */
         margin-left: 5%;
         margin-right: 5%;
     }
     .nuevo-objetivo{
         background-color: rgb(93, 244, 244);
-        font-size: 5px;
+        font-size: 15px;
         min-width: 40px;
     }
     th:nth-child(1) { width: 25%; }
