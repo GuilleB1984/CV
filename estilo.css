@@ -98,9 +98,7 @@ thead {
     padding: 10px;
   }
 
-  tr th{
-    font-size: 25px;
-  }
+
 
   th:nth-child(1) { width: 20%; }
   th:nth-child(2) { width: 27%; }
@@ -244,7 +242,7 @@ img {
     }
     .nuevo-objetivo{
         background-color: rgb(93, 244, 244);
-        font-size: 25px;
+        font-size: 15px;
         min-width: 40px;
     }
     th:nth-child(1) { width: 10%; }
