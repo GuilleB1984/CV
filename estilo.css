@@ -61,7 +61,8 @@ thead {
 }
 .nuevo-objetivo{
     background-color: rgb(93, 244, 244);
-    min-width: 90px;
+    min-width: 120px;
+    font-size: 20px ;
 }
 
 .triple-objetivo{
@@ -242,7 +243,7 @@ img {
     }
     .nuevo-objetivo{
         background-color: rgb(93, 244, 244);
-        font-size: 15px;
+        font-size: 7px;
         min-width: 40px;
     }
     th:nth-child(1) { width: 10%; }
