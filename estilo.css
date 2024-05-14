@@ -36,8 +36,8 @@ p {
     text-align: center;
     font-size: 22px;
     margin-bottom: 20px;
-    margin-left: 7%;
-    margin-right: 7%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 
@@ -109,18 +109,20 @@ thead {
 
 
   .centrar {
-    display: grid;
-    width: 80%; /* Ancho del div */
-    margin: 0 auto; /* Centrar el div horizontalmente */
-    text-align: center; /* Centrar el texto dentro del div */
-    align-content:center;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    /* align-content: center; */
+    flex-direction: column;
     justify-content: center;
-}
+    align-items: center;
+  }
 
 img {
     display: grid;
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     align-items: center;
 }
 
@@ -141,13 +143,14 @@ img {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.estado{
+.estado {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: space-evenly;
     margin-bottom: 10px;
     align-items: center;
-    max-width: 90%;
+    max-width: 50%;
+    padding: 1%;
 }
 .verde{
     color:  green;
@@ -173,6 +176,10 @@ img {
     border: 2px dotted #716e6e ;
 }
 
+.tabla{
+    max-width: 70%;
+}
+
 @media (max-width: 500px) {
     *{
         width: 100%;
@@ -186,10 +193,16 @@ img {
     
     .container {
         display: grid;
-        max-width: 80%;
+        max-width: 100%;
         margin: 0 auto;
         padding: 5px;
         align-items: center;
+    }
+.centrar{
+    width: 90%;
+}
+    .tabla{
+        max-width: 85%;
     }
     tr td{
         font-size: 10px;
@@ -230,11 +243,12 @@ img {
     }
     .nuevo-objetivo{
         background-color: rgb(93, 244, 244);
-        min-width: 45px;
+        font-size: 5px;
+        min-width: 40px;
     }
-    th:nth-child(1) { width: 20%; }
-    th:nth-child(2) { width: 27%; }
-    th:nth-child(3) { width: 13%; }
-    th:nth-child(4) { width: 27%; }
-    th:nth-child(5) { width: 13%; }
+    th:nth-child(1) { width: 25%; }
+    th:nth-child(2) { width: 26%; }
+    th:nth-child(3) { width: 12%; }
+    th:nth-child(4) { width: 26%; }
+    th:nth-child(5) { width: 11%; }
 }
