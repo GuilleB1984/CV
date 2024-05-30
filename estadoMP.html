@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener datos de Google Sheets</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .data-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .data-table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .data-table th, .data-table td {
+            border: 2px solid #292727;
+            text-align: center;
+            padding: 8px;
+            white-space: nowrap; /* Evita que el contenido de las celdas se rompa en varias líneas */
+        }
+
+        .data-table th {
+            background-color: #39c34d;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .data-table td {
+            background-color: #d4d3d3;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        /* Estilos específicos para diferentes hojas */
+        .sheet1-table {
+            background-color: #f9f9f9;
+        }
+
+        .sheet2-table {
+            background-color: #199e70;
+            color: white;
+        }
+
+        .table-title {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estado Empresa M.P.</h1>
+    <section id="tables-section">
+        <!-- Contenedores de tablas se generan dinámicamente aquí -->
+    </section>
+
+    <script>
+        // URL de tu API web en Google Apps Script
+        const apiUrl = "https://script.google.com/macros/s/AKfycbwWKbKqpc9uWDgE9DzjNe59OdEH_eQWubjpo6bCQf-LO_CZAzUZM550GkUky2xrSLqR/exec";
+
+        // Función para obtener los datos de la API y mostrarlos en una tabla
+        async function fetchData() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                // Limpiar el contenedor
+                const section = document.getElementById("tables-section");
+                section.innerHTML = '';
+
+                // Crear y mostrar las tablas
+                data.forEach(sheetData => {
+                    const container = document.createElement('div');
+                    container.classList.add('data-container');
+
+                    const title = document.createElement('h2');
+                    title.classList.add('table-title');
+                    title.textContent = sheetData.sheetName;
+                    container.appendChild(title);
+
+                    const table = document.createElement('table');
+                    table.classList.add('data-table');
+
+                    // Agregar clase específica según el nombre de la hoja
+                    if (sheetData.sheetName === "Sheet1") {
+                        table.classList.add('sheet1-table');
+                    } else if (sheetData.sheetName === "Sheet2") {
+                        table.classList.add('sheet2-table');
+                    }
+
+                    const thead = table.createTHead();
+                    const tbody = table.createTBody();
+
+                    // Crear encabezados de tabla
+                    const headerRow = thead.insertRow();
+                    sheetData.data[0].forEach(key => {
+                        const th = document.createElement('th');
+                        th.textContent = key;
+                        headerRow.appendChild(th);
+                    });
+
+                    // Llenar la tabla con los datos
+                    sheetData.data.slice(1).forEach(rowData => {
+                        const row = tbody.insertRow();
+                        rowData.forEach(value => {
+                            const cell = row.insertCell();
+                            cell.textContent = value;
+                        });
+                    });
+
+                    // Agregar la tabla al contenedor
+                    container.appendChild(table);
+                    section.appendChild(container);
+                });
+            } catch (error) {
+                console.error("Error al cargar los datos:", error);
+            }
+        }
+
+        // Cargar los datos inicialmente y luego actualizar cada 5 segundos
+        window.onload = () => {
+            fetchData(); // Cargar los datos inicialmente
+            setInterval(fetchData, 5000); // Actualizar cada 5 segundos
+        };
+    </script>
+</body>
+</html>
