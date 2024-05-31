@@ -63,7 +63,7 @@
 
     <script>
         // URL de tu API web en Google Apps Script
-        const apiUrl = "https://script.google.com/macros/s/AKfycbxVXIaazHsDjTvz3oYYLztQM8gqA31fqqCTUGcTv6TB9z-1JfDJC3ly5A1nJe7Ode9y/exec";
+        const apiUrl = "https://script.google.com/macros/s/AKfycbxROASigMtkECd_WbkSnH056ZntaTUuA0-_dJENXRMN4-gg4BVQLJsP0-xUu3jVkvJB/exec";
 
         // Función para obtener los datos de la API y mostrarlos en una tabla
         async function fetchData() {
@@ -93,6 +93,8 @@
                         table.classList.add('sheet1-table');
                     } else if (sheetData.sheetName === "Sheet2") {
                         table.classList.add('sheet2-table');
+                    } else if (sheetData.sheetName === "Sheet3") {
+                        table.classList.add('sheet3-table');
                     }
 
                     const thead = table.createTHead();
