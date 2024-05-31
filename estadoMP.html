@@ -8,7 +8,7 @@
         h1 {
             text-align: center;
         }
-        
+      
         .data-container {
             margin-top: 20px;
             display: flex;
@@ -59,6 +59,18 @@
             text-align: center;
             margin-top: 20px;
         }
+
+        /* Media query para pantallas pequeñas */
+        @media (max-width: 430px) {
+            .data-table th, .data-table td {
+                font-size: 13px; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+                padding: 4px; /* Ajusta el padding para pantallas pequeñas */
+            }
+
+            .table-title {
+                font-size: 18px; /* Ajusta el tamaño del título para pantallas pequeñas */
+            }
+        }
     </style>
 </head>
 <body>
@@ -69,7 +81,7 @@
 
     <script>
         // URL de tu API web en Google Apps Script
-        const apiUrl = "https://script.google.com/macros/s/AKfycbxROASigMtkECd_WbkSnH056ZntaTUuA0-_dJENXRMN4-gg4BVQLJsP0-xUu3jVkvJB/exec";
+        const apiUrl = "https://script.google.com/macros/s/AKfycbytRCroLdvh_IIDOfTiyII7T5PjZ9k39FIqTb-Y7ZN-qvOGQ7viCgQhtbHtaOfL0Qrl/exec";
 
         // Función para obtener los datos de la API y mostrarlos en una tabla
         async function fetchData() {
