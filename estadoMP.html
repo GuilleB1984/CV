@@ -8,7 +8,7 @@
         h1 {
             text-align: center;
         }
-      
+
         .data-container {
             margin-top: 20px;
             display: flex;
@@ -37,27 +37,24 @@
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
         }
-        
+
         .data-table td {
             background-color: #d4d3d3;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
         }
 
-        /* Estilos específicos para diferentes hojas */
-        .sheet1-table {
-            background-color: #f9f9f9;
-        }
-
-        .sheet2-table {
-            background-color: #199e70;
-            color: white;
-        }
-
         .table-title {
             font-size: 24px;
             text-align: center;
             margin-top: 20px;
+        }
+
+        .max-value {
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         /* Media query para pantallas pequeñas */
@@ -81,7 +78,7 @@
 
     <script>
         // URL de tu API web en Google Apps Script
-        const apiUrl = "https://script.google.com/macros/s/AKfycbytRCroLdvh_IIDOfTiyII7T5PjZ9k39FIqTb-Y7ZN-qvOGQ7viCgQhtbHtaOfL0Qrl/exec";
+        const apiUrl = "https://script.google.com/macros/s/AKfycbw1WgDVJ0n0XOFg8PXBk2jR-fFUCJTfcH0zXjUW6v519Ff7lpKSMLDoNWR3IkJD4FM4/exec";
 
         // Función para obtener los datos de la API y mostrarlos en una tabla
         async function fetchData() {
@@ -145,6 +142,16 @@
 
                     // Agregar el contenedor de tabla al contenedor general
                     container.appendChild(tableContainer);
+
+                    // Formatear la fecha en formato dd/mm/yyyy
+                    const formattedDate = new Date(sheetData.max).toLocaleDateString('es-ES');
+
+                    // Agregar el valor máximo debajo de la tabla
+                    const maxValue = document.createElement('div');
+                    maxValue.classList.add('max-value');
+                    maxValue.textContent = `Ultima Actualizacion: ${formattedDate}`;
+                    container.appendChild(maxValue);
+
                     section.appendChild(container);
                 });
             } catch (error) {
